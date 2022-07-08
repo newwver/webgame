@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NumberBaseball from '../3.숫자야구/NumberBaseballClass';
 import RSP from '../5.가위바위보/RSPClass';
 import Lotto from '../6.로또/LottoClass';
-import {useLocation, useNavigate, Routes, Route} from 'react-router';
+import { useLocation, useNavigate, Routes, Route } from 'react-router';
 
 const GameMatcher = () => {
   const location = useLocation();
@@ -10,6 +10,7 @@ const GameMatcher = () => {
   let urlSearchParams = new URLSearchParams(location.search.slice(1));
   console.log(urlSearchParams.get('hello'));
   console.log(urlSearchParams.get('page'));
+  console.log(location);
   return (
     <Routes>
       <Route path="number-baseball" element={<NumberBaseball />} />
@@ -23,6 +24,6 @@ const GameMatcher = () => {
       />
     </Routes>
   );
-}
+};
 
 export default GameMatcher;
